@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        font-family: 'Lexend', sans-serif;
+    }
+</style>
+<body>
+    <header>
+        <nav style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); background-color: #F9F7F3; padding-bottom: 1rem;">
+            <div class="flex justify-between items-center p-4 text-2xl md:text-3xl lg:text-4xl">
+                <!-- Button at the top left -->
+                <button class="btn" style="background-color: #B4F461; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 0.5rem 1.5rem; font-size: 0.875em;">
+                    Blog
+                </button>
+                
+                <!-- Centered Donate Bangladesh -->
+                <div class="flex items-center" style="color: #333; font-weight: 600; flex-grow: 1; justify-content: center;">
+                    <img src="logo.png" alt="Logo" class="h-8 md:h-10 lg:h-12">
+                    <span class="ml-2">Donate Bangladesh</span>
+                </div>
+                
+                <!-- Coin and 98600 BDT at the top right -->
+                <div class="flex items-center space-x-2" style="color: #333; font-weight: 600;">
+                    <img src="coin.png" alt="Coin" class="h-8 md:h-10 lg:h-12">
+                    <span>98600 BDT</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="flex flex-col items-center mt-10 p-6  rounded-lg shadow-md w-[90%] mx-auto"> <!-- Added padding, background color, and adjusted border -->
+        <!-- Button Row -->
+        <div class="flex space-x-4 mb-4">
+            <button class="btn" style="background-color: #B4F461; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 1rem 3rem; font-size: 1.25rem; color: #333; font-weight: 600; border-radius: 0.375rem;">
+                Donation
+            </button>
+            <button class="btn" style="background-color: #1111110D; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 1rem 3rem; font-size: 1.25rem; color: #333; font-weight: 600; border-radius: 0.375rem;">
+                History
+            </button>
+        </div>
+    
+        <!-- Donation Sections -->
+        <div class="flex justify-center mt-10">
+            <div class="max-w-5xl w-full flex space-x-4 p-6 border border-gray-200 rounded-lg shadow-lg">
+                <div class="flex-shrink-0 w-1/2">
+                    <div class="h-96 overflow-hidden">
+                        <img src="noakhali.png" alt="Flood picture" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="flex flex-col flex-grow w-1/2">
+                    <div class="flex items-center space-x-2 mb-4"> <!-- Increased margin bottom -->
+                        <button class="btn" style="background-color: #1111110D; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 0.5rem 1.5rem; font-size: 0.875em;">
+                            <img src="coin.png" alt="">
+                            0 BDT
+                        </button>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3"> <!-- Increased margin bottom -->
+                        Donate for Flood at Noakhali, Bangladesh
+                    </h3>
+                    <p class="mb-4"> <!-- Increased margin bottom -->
+                        The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies to those affected by this disaster. Every contribution, big or small, makes a difference.
+                    </p>
+                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full max-w-xs mb-10" /> <!-- Increased margin bottom -->
+                    <button class="btn btn-wide w-full" style="background-color:#B4F461;">Donate Now</button>
+
+                </div>
+                
+            </div>
+        </div>
+    
+        <!-- Repeat similar structure for other donation sections -->
+        <div class="flex justify-center mt-10">
+            <div class="max-w-5xl w-full flex space-x-4 p-6 border border-gray-200 rounded-lg shadow-lg">
+                <div class="flex-shrink-0 w-1/2">
+                    <div class="h-96 overflow-hidden">
+                        <img src="feni.png" alt="Flood picture" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="flex flex-col flex-grow w-1/2">
+                    <div class="flex items-center space-x-2 mb-8">
+                        <button class="btn" style="background-color: #1111110D; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 0.5rem 1.5rem; font-size: 0.875em;">
+                            <img src="coin.png" alt="">
+                            600 BDT
+                        </button>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Donate for Flood Relief in Feni, Bangladesh</h3>
+                    <p class="mb-2">The recent floods in Feni have devastated local communities. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies.</p>
+                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full max-w-xs mb-10" />
+                    <button class="btn btn-wide w-full" style="background-color:#B4F461;">Donate Now</button>
+
+                </div>
+            </div>
+        </div>
+    
+        <div class="flex justify-center mt-10">
+            <div class="max-w-5xl w-full flex space-x-4 p-6 border border-gray-200 rounded-lg shadow-lg">
+                <div class="flex-shrink-0 w-1/2">
+                    <div class="h-96 overflow-hidden">
+                        <img src="quota-protest.png" alt="Flood picture" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="flex flex-col flex-grow w-1/2">
+                    <div class="flex items-center space-x-2 mb-8">
+                        <button class="btn" style="background-color:#1111110D; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 0.5rem 1.5rem; font-size: 0.875em;">
+                            <img src="coin.png" alt="">
+                            2400 BDT
+                        </button>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Aid for Injured in the Quota Movement</h3>
+                    <p class="mb-5">Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected by the recent Quota movement.</p>
+                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full max-w-xs mb-16" />
+                    <button class="btn btn-wide w-full" style="background-color:#B4F461;">Donate Now</button>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class= "p-4"> 
+        <div class="bg-[#F9F7F3] h-32"></div> <!-- Box with height and background color -->
+    </footer>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<script src="js/index.js"></script>  
+</body>
+</html>
