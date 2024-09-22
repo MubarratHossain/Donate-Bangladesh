@@ -25,11 +25,25 @@ function updateBalance(buttonId) {
         return; // Exit if the input is invalid
     }
 
+    // Get the total money available and parse it
+    let totalMoneyText = document.getElementById('Total-money').textContent.trim();
+    let totalMoney = parseFloat(totalMoneyText) || 0;
+
+    // Check if the donation can be made
+    if (donationAmount > totalMoney) {
+        alert('Insufficient funds. You cannot donate more than the available amount.');
+        return;
+    }
+
     // Update the balance
     let newBalance = currentBalance + donationAmount;
 
     // Update the button text with the new balance
     document.querySelector(`#${buttonId}`).innerHTML = `<img src="coin.png" alt=""> ${newBalance} BDT`;
+
+    // Update the total money by subtracting the donation amount
+    let newTotalMoney = totalMoney - donationAmount;
+    document.getElementById('Total-money').textContent = `${newTotalMoney} BDT`;
 
     // Show the modal with a success message
     document.getElementById('modal-title').textContent = 'Donation Successful!';
@@ -39,6 +53,9 @@ function updateBalance(buttonId) {
     // Clear the input field
     donationInput.value = '';
 }
+
+
+
 
 
 
