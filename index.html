@@ -59,21 +59,16 @@
                     </div>
                 </div>
                 <div class="flex flex-col flex-grow w-1/2">
-                    <div class="flex items-center space-x-2 mb-4"> <!-- Increased margin bottom -->
-                        <button class="btn" style="background-color: #1111110D; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 0.5rem 1.5rem; font-size: 0.875em;">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <button id="btn-first-1" class="btn" style="background-color: #1111110D; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 0.5rem 1.5rem; font-size: 0.875em;">
                             <img src="coin.png" alt="">
                             0 BDT
                         </button>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3"> <!-- Increased margin bottom -->
-                        Donate for Flood at Noakhali, Bangladesh
-                    </h3>
-                    <p class="mb-4"> <!-- Increased margin bottom -->
-                        The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies to those affected by this disaster. Every contribution, big or small, makes a difference.
-                    </p>
-                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full max-w-xs mb-10" /> <!-- Increased margin bottom -->
-                    <button class="btn btn-wide w-full" style="background-color:#B4F461;">Donate Now</button>
-
+                    <h3 class="text-xl font-semibold mb-3">Donate for Flood at Noakhali, Bangladesh</h3>
+                    <p class="mb-4">The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies to those affected by this disaster. Every contribution, big or small, makes a difference.</p>
+                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full max-w-xs mb-10" />
+                    <button id="clk-btn-1" class="btn btn-wide w-full" style="background-color:#B4F461;">Donate Now</button>
                 </div>
                 
             </div>
@@ -89,7 +84,7 @@
                 </div>
                 <div class="flex flex-col flex-grow w-1/2">
                     <div class="flex items-center space-x-2 mb-8">
-                        <button class="btn" style="background-color: #1111110D; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 0.5rem 1.5rem; font-size: 0.875em;">
+                        <button id="btn-second-1" class="btn" style="background-color: #1111110D; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 0.5rem 1.5rem; font-size: 0.875em;">
                             <img src="coin.png" alt="">
                             600 BDT
                         </button>
@@ -97,8 +92,7 @@
                     <h3 class="text-xl font-semibold mb-4">Donate for Flood Relief in Feni, Bangladesh</h3>
                     <p class="mb-2">The recent floods in Feni have devastated local communities. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies.</p>
                     <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full max-w-xs mb-10" />
-                    <button class="btn btn-wide w-full" style="background-color:#B4F461;">Donate Now</button>
-
+                    <button id="clk-btn-2" class="btn btn-wide w-full" style="background-color:#B4F461;">Donate Now</button>
                 </div>
             </div>
         </div>
@@ -112,7 +106,7 @@
                 </div>
                 <div class="flex flex-col flex-grow w-1/2">
                     <div class="flex items-center space-x-2 mb-8">
-                        <button class="btn" style="background-color:#1111110D; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 0.5rem 1.5rem; font-size: 0.875em;">
+                        <button id="btn-third-1" class="btn" style="background-color: #1111110D; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 0.5rem 1.5rem; font-size: 0.875em;">
                             <img src="coin.png" alt="">
                             2400 BDT
                         </button>
@@ -120,8 +114,7 @@
                     <h3 class="text-xl font-semibold mb-2">Aid for Injured in the Quota Movement</h3>
                     <p class="mb-5">Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected by the recent Quota movement.</p>
                     <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full max-w-xs mb-16" />
-                    <button class="btn btn-wide w-full" style="background-color:#B4F461;">Donate Now</button>
-
+                    <button id="clk-btn-3" class="btn btn-wide w-full" style="background-color:#B4F461;">Donate Now</button>
                 </div>
             </div>
         </div>
@@ -139,5 +132,15 @@
     
     
 <script src="js/index.js"></script>  
+<input type="checkbox" id="my_modal_6" class="modal-toggle" />
+<div class="modal" role="dialog">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold" id="modal-title">Donation Successful!</h3>
+    <p class="py-4" id="modal-message">Thank you for your contribution.</p>
+    <div class="modal-action">
+      <label for="my_modal_6" class="btn">Close!</label>
+    </div>
+  </div>
+</div>
 </body>
 </html>
