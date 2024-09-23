@@ -124,7 +124,7 @@
                         <div class="flex items-center space-x-2 mb-8">
                             <button id="btn-second-1" class="btn bg-gray-100 hover:bg-gray-200 transition duration-150 ease-in-out rounded-lg shadow-md p-2 flex items-center">
                                 <img src="coin.png" alt="" class="h-6 mr-2">
-                                <span class="text-lg font-semibold">600 BDT</span>
+                                <span class="text-lg font-semibold">0 BDT</span>
                             </button>
                         </div>
                         <h3 class="text-xl font-semibold mb-4">Donate for Flood Relief in Feni, Bangladesh</h3>
@@ -148,7 +148,7 @@
                         <div class="flex items-center space-x-2 mb-8">
                             <button id="btn-third-1" class="btn bg-gray-100 hover:bg-gray-200 transition duration-150 ease-in-out rounded-lg shadow-md p-2 flex items-center">
                                 <img src="coin.png" alt="" class="h-6 mr-2">
-                                <span class="text-lg font-semibold">2400 BDT</span>
+                                <span class="text-lg font-semibold">0 BDT</span>
                             </button>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Aid for Injured in the Quota Movement</h3>
@@ -187,8 +187,8 @@
 
         // Initial amounts for donation buttons
         let firstDonationAmount = 0;
-        let secondDonationAmount = 600; // starting amount for the second button
-        let thirdDonationAmount = 2400; // starting amount for the third button
+        let secondDonationAmount = 0; // starting amount for the second button
+        let thirdDonationAmount = 0; // starting amount for the third button
 
         // Update the button text to reflect the initial amounts
         document.getElementById("btn-first-1").innerHTML = `<img src="coin.png" alt=""> ${firstDonationAmount} BDT`;
@@ -263,7 +263,42 @@
             document.getElementById("donation-section").style.display = "none";
             document.getElementById("history-section").style.display = "block";
         }
-   
+   // Get the donation and history buttons
+const donationBtn = document.getElementById('donation-btn');
+const historyBtn = document.getElementById('history-btn');
+
+// Define the active and inactive styles
+const activeStyles = {
+    backgroundColor: '#B4F461',
+    color: '#333',
+};
+
+const inactiveStyles = {
+    backgroundColor: '#1111110D',
+    color: '#333',
+};
+
+// Function to update styles
+function setActiveButton(activeBtn, inactiveBtn) {
+    // Apply active styles to the clicked button
+    activeBtn.style.backgroundColor = activeStyles.backgroundColor;
+    activeBtn.style.color = activeStyles.color;
+
+    // Apply inactive styles to the other button
+    inactiveBtn.style.backgroundColor = inactiveStyles.backgroundColor;
+    inactiveBtn.style.color = inactiveStyles.color;
+}
+
+// Add click event listener to the donation button
+donationBtn.addEventListener('click', function () {
+    setActiveButton(donationBtn, historyBtn);
+});
+
+// Add click event listener to the history button
+historyBtn.addEventListener('click', function () {
+    setActiveButton(historyBtn, donationBtn);
+});
+
 
     </script>
 </body>
