@@ -74,7 +74,8 @@
                 <button class="btn" style="background-color: #B4F461; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 0.5rem 1.5rem; font-size: 0.875em;">
                     Blog
                 </button>
-                <div class="flex items-center" style="color: #333; font-weight: 600; flex-grow: 1; justify-content: center;">
+                <!-- Container for Logo and Donate Bangladesh (Hidden on mobile view) -->
+                <div class="hidden md:flex items-center" style="color: #333; font-weight: 600; flex-grow: 1; justify-content: center;">
                     <img src="logo.png" alt="Logo" class="h-8 md:h-10 lg:h-12">
                     <span class="ml-2">Donate Bangladesh</span>
                 </div>
@@ -85,6 +86,7 @@
             </div>
         </nav>
     </header>
+    
 
     <main class="flex flex-col items-center mt-10 p-6 rounded-lg shadow-md w-[90%] mx-auto">
         <div class="flex space-x-4 mb-4">
@@ -98,13 +100,13 @@
         
         <div id="donation-section">
             <div class="flex justify-center mt-10">
-                <div class="max-w-5xl w-full flex space-x-4 p-6 border border-gray-200 rounded-lg shadow-lg bg-white">
-                    <div class="flex-shrink-0 w-1/2">
+                <div class="max-w-5xl w-full flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 p-6 border border-gray-200 rounded-lg shadow-lg bg-white">
+                    <div class="flex-shrink-0 w-full md:w-1/2">
                         <div class="h-96 overflow-hidden rounded-lg">
                             <img src="noakhali.png" alt="Flood picture" class="w-full h-full object-cover transition-transform transform hover:scale-105">
                         </div>
                     </div>
-                    <div class="flex flex-col flex-grow w-1/2">
+                    <div class="flex flex-col flex-grow w-full md:w-1/2">
                         <div class="flex items-center space-x-2 mb-4">
                             <button id="btn-first-1" class="btn bg-gray-100 hover:bg-gray-200 transition duration-150 ease-in-out rounded-lg shadow-md p-2 flex items-center">
                                 <img src="coin.png" alt="" class="h-6 mr-2">
@@ -114,21 +116,22 @@
                         <h3 class="text-xl font-semibold mb-3">Donate for Flood at Noakhali, Bangladesh</h3>
                         <p class="mb-4 text-gray-700">The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies to those affected by this disaster. Every contribution, big or small, makes a difference.</p>
                         <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full max-w-xs mb-4 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-150 ease-in-out" />
-                        <button id="clk-btn-1" class="btn btn-wide w-full  text-[#111111] font-semibold rounded-lg p-3 shadow-md" style="background-color: #B4F461;">
+                        <button id="clk-btn-1" class="btn btn-wide w-full text-[#111111] font-semibold rounded-lg p-3 shadow-md" style="background-color: #B4F461;">
                             Donate Now
                         </button>
                     </div>
                 </div>
             </div>
             
+            
             <div class="flex justify-center mt-10">
-                <div class="max-w-5xl w-full flex space-x-4 p-6 border border-gray-200 rounded-lg shadow-lg bg-white">
-                    <div class="flex-shrink-0 w-1/2">
+                <div class="max-w-5xl w-full flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 p-6 border border-gray-200 rounded-lg shadow-lg bg-white">
+                    <div class="flex-shrink-0 w-full md:w-1/2">
                         <div class="h-96 overflow-hidden rounded-lg">
                             <img src="feni.png" alt="Flood picture" class="w-full h-full object-cover transition-transform transform hover:scale-105">
                         </div>
                     </div>
-                    <div class="flex flex-col flex-grow w-1/2">
+                    <div class="flex flex-col flex-grow w-full md:w-1/2">
                         <div class="flex items-center space-x-2 mb-8">
                             <button id="btn-second-1" class="btn bg-gray-100 hover:bg-gray-200 transition duration-150 ease-in-out rounded-lg shadow-md p-2 flex items-center">
                                 <img src="coin.png" alt="" class="h-6 mr-2">
@@ -138,21 +141,22 @@
                         <h3 class="text-xl font-semibold mb-4">Donate for Flood Relief in Feni, Bangladesh</h3>
                         <p class="mb-2 text-gray-700">The recent floods in Feni have devastated local communities. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies.</p>
                         <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full max-w-xs mb-4 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-150 ease-in-out" />
-                        <button id="clk-btn-2" class="btn btn-wide w-full text-[#111111] font-semibold rounded-lg p-3 shadow-md " style="background-color: #B4F461;">
+                        <button id="clk-btn-2" class="btn btn-wide w-full text-[#111111] font-semibold rounded-lg p-3 shadow-md" style="background-color: #B4F461;">
                             Donate Now
                         </button>
                     </div>
                 </div>
             </div>
             
+            
             <div class="flex justify-center mt-10">
-                <div class="max-w-5xl w-full flex space-x-4 p-6 border border-gray-200 rounded-lg shadow-lg bg-white">
-                    <div class="flex-shrink-0 w-1/2">
+                <div class="max-w-5xl w-full flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 p-6 border border-gray-200 rounded-lg shadow-lg bg-white">
+                    <div class="flex-shrink-0 w-full md:w-1/2">
                         <div class="h-96 overflow-hidden rounded-lg">
                             <img src="quota-protest.png" alt="Flood picture" class="w-full h-full object-cover transition-transform transform hover:scale-105">
                         </div>
                     </div>
-                    <div class="flex flex-col flex-grow w-1/2">
+                    <div class="flex flex-col flex-grow w-full md:w-1/2">
                         <div class="flex items-center space-x-2 mb-8">
                             <button id="btn-third-1" class="btn bg-gray-100 hover:bg-gray-200 transition duration-150 ease-in-out rounded-lg shadow-md p-2 flex items-center">
                                 <img src="coin.png" alt="" class="h-6 mr-2">
@@ -168,6 +172,7 @@
                     </div>
                 </div>
             </div>
+            
             
             
         </div>
