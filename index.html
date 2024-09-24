@@ -178,12 +178,19 @@
         
             <div id="donation-modal" class="fixed inset-0 flex items-center justify-center z-50" style="display: none;">
                 <div class="modal-overlay absolute inset-0 bg-black opacity-50"></div>
-                <div class="modal-content bg-white rounded-lg p-6 max-w-sm mx-auto relative">
-                    <h2 class="text-xl font-bold mb-4">Donation Successful!</h2>
-                    <p id="modal-message" class="text-gray-700"></p>
-                    <button id="close-modal" class="mt-4 px-4 py-2 bg-green-500 text-white rounded-lg">Close</button>
+                <div class="modal-content bg-white rounded-lg p-6 max-w-md mx-auto relative shadow-lg">
+                    <h2 class="text-3xl font-bold mb-4 text-center text-green-500">Congrats!</h2>
+                    <div class="flex justify-center mb-4">
+                        <img src="coin.png" alt="" class="h-12 w-12"> <!-- Increased size of the coin image -->
+                    </div>
+                    <p class="text-gray-600 text-center mb-4">You have Donated for Humankind</p>
+                    <p id="modal-message" class="text-gray-700 text-lg text-center"></p> <!-- Added message paragraph -->
+                    
+                    <button id="close-modal" class="mt-4 w-full px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200">Close</button>
                 </div>
             </div>
+            
+            
         
 
         
@@ -231,15 +238,15 @@ buttons.forEach((button, index) => {
         let cause = '';
         if (index === 0) {
             firstDonationAmount += amount;
-            cause = "Noakhali";
+            cause = "Famine-2024 at Noakhali";
             document.getElementById("btn-first-1").innerHTML = `<img src="coin.png" alt=""> ${firstDonationAmount} BDT`;
         } else if (index === 1) {
             secondDonationAmount += amount;
-            cause = "Feni";
+            cause = "Flood Relief in Feni";
             document.getElementById("btn-second-1").innerHTML = `<img src="coin.png" alt=""> ${secondDonationAmount} BDT`;
         } else if (index === 2) {
             thirdDonationAmount += amount;
-            cause = "Quota";
+            cause = "Aid for Injured in Quota Movement";
             document.getElementById("btn-third-1").innerHTML = `<img src="coin.png" alt=""> ${thirdDonationAmount} BDT`;
         }
 
