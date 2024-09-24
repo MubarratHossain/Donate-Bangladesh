@@ -33,33 +33,33 @@
 <body>
 <header></header>
     
-<div class="sticky top-0 z-10" style=" backdrop-filter: blur(10px)">
-<nav style="padding-bottom: 1rem; background-color: rgb(228, 222, 212); backdrop-filter: blur(10px);">
- <div class="flex justify-between items-center w-full p-4 text-lg md:text-xl lg:text-2xl">
+    <div class="sticky top-0 z-10" style=" backdrop-filter: blur(10px)">
+        <nav style="padding-bottom: 1rem; background-color: rgb(233, 231, 221); ">
+         <div class="flex justify-between items-center w-full p-4 text-lg md:text-xl lg:text-2xl">
+                     
+        <div class="flex items-center w-[25%]">
+        <a href="home.html">
+        <button class="btn transition duration-200 ease-in-out transform hover:scale-105" style="background-color: #B4F461;  padding: 0.5rem 1rem; font-size: 0.875em; border-radius: 0.375rem;">
+         Blog
+        </button>
+        </a>
+        </div>
              
-<div class="flex items-center w-[25%]">
-<a href="home.html">
-<button class="btn transition duration-200 ease-in-out transform hover:scale-105" style="background-color: #B4F461; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 0.5rem 1rem; font-size: 0.875em; border-radius: 0.375rem;">
- Blog
-</button>
-</a>
-</div>
-     
-            
-<div class="hidden md:flex items-center justify-center w-[50%]" style="color: #333; font-weight: 600;">
-<img src="logo.png" alt="Logo" class="h-8 md:h-10 lg:h-12">
-<span class="ml-2 md:ml-4  md:text-lg" style="font-size:xx-large;">Donate Bangladesh</span>
-</div>
-     
+                    
+        <div class="hidden md:flex items-center justify-center w-[50%]" style="color: #333; font-weight: 600;">
+        <img src="logo.png" alt="Logo" class="h-8 md:h-10 lg:h-12">
+        <span class="ml-2 md:ml-4  md:text-lg" style="font-size:xx-large;">Donate Bangladesh</span>
+        </div>
              
-<div class="flex items-center justify-end w-[25%]" style="color: #333; font-weight: 600;">
-<span class="h-8 md:h-10 lg:h-12 flex items-center">
-<img src="coin.png" alt="Coin" class="h-6 md:h-8 lg:h-10">
-<span id="Total-money" class="ml-2 text-sm md:text-lg">98600 BDT</span>
-</span>
-</div>
-</div>
-</nav>
+                     
+        <div class="flex items-center justify-end w-[25%]" style="color: #333; font-weight: 600;">
+        <span class="h-8 md:h-10 lg:h-12 flex items-center">
+        <img src="coin.png" alt="Coin" class="h-6 md:h-8 lg:h-10">
+        <span id="Total-money" class="ml-2 text-sm md:text-lg">98600 BDT</span>
+        </span>
+        </div>
+        </div>
+        </nav>
      
  </header>                 
     
@@ -68,16 +68,18 @@
         
         
       
-<div class="flex flex-col md:flex-row items-center justify-center mb-4" style="backdrop-filter: blur(10px);">
-<div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 p-4">
-<button id="donation-btn" class="btn active w-full md:w-auto px-4 py-3 text-base" style="background-color: #B4F461; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); color: #333; font-weight: 600; border-radius: 0.375rem;">
-Donation
-</button>
-<button id="history-btn" class="btn w-full md:w-auto px-4 py-3 text-base" style="background-color: #1111110D; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); color: #333; font-weight: 600; border-radius: 0.375rem;">
-History
-</button>
+ <div class="flex flex-col md:flex-row items-center justify-center mb-4" style="backdrop-filter: blur(10px); box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(0, 0, 0, 0.05); color: #333; font-weight: 600; border-radius: 0.375rem;">
+ <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 p-4">
+ <button id="donation-btn" class="btn active w-full md:w-auto px-4 py-3 text-base" style="background-color: #B4F461; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.05); color: #333; font-weight: 600; border-radius: 0.375rem;">
+            Donation
+ </button>
+ <button id="history-btn" class="btn w-full md:w-auto px-4 py-3 text-base" style="background-color: #1111110D; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.05); color: #333; font-weight: 600; border-radius: 0.375rem;">
+            History
+ </button>
 </div>
 </div>
+
+
         
         
         
@@ -314,6 +316,7 @@ donationBtn.addEventListener('click', function () {
 historyBtn.addEventListener('click', function () {
     setActiveButton(historyBtn, donationBtn);
 });
+
 </script>
 </body>
 </html>
