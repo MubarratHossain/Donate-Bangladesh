@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate Bangladesh</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Lexend", sans-serif;
         }
         #history-list {
             list-style-type: none;
@@ -73,29 +78,33 @@
     <header></header>
     <div class="sticky top-0 z-10" style="  backdrop-filter: blur(10px)">
        
-        <nav style="padding-bottom: 1rem  ; background-color:rgb(249, 247, 243); backdrop-filter: blur(10px)">
-            <div class="flex justify-between items-center w-full p-4 text-2xl md:text-3xl lg:text-4xl">
+        <nav style="padding-bottom: 1rem; background-color: rgb(249, 247, 243); backdrop-filter: blur(10px);">
+            <div class="flex justify-between items-center w-full p-4 text-lg md:text-xl lg:text-2xl">
                 <!-- Blog Button - Left Side (25% width) -->
                 <div class="flex items-center w-[25%]">
-                    <a href="home.html"><button class="btn" style="background-color: #B4F461; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 0.5rem 1.5rem; font-size: 0.875em;">
-                        Blog
-                    </button>
+                    <a href="home.html">
+                        <button class="btn transition duration-200 ease-in-out transform hover:scale-105" style="background-color: #B4F461; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 0.5rem 1rem; font-size: 0.875em; border-radius: 0.375rem;">
+                            Blog
+                        </button>
                     </a>
                 </div>
         
                 <!-- Donate Bangladesh - Center (50% width) -->
                 <div class="hidden md:flex items-center justify-center w-[50%]" style="color: #333; font-weight: 600;">
-                    <img src="logo.png" alt="Logo" class="h-8  md:h-10 lg:h-12">
-                    <span class="ml-4">Donate Bangladesh</span>
+                    <img src="logo.png" alt="Logo" class="h-8 md:h-10 lg:h-12">
+                    <span class="ml-2 md:ml-4  md:text-lg" style="font-size:xx-large;">Donate Bangladesh</span>
                 </div>
         
                 <!-- Total Money - Right Side (25% width) -->
                 <div class="flex items-center justify-end w-[25%]" style="color: #333; font-weight: 600;">
-                    <img src="coin.png" alt="Coin" class="h-8 md:h-10 lg:h-12">
-                    <span id="Total-money" class="ml-2">98600 BDT</span>
+                    <span class="h-8 md:h-10 lg:h-12 flex items-center">
+                        <img src="coin.png" alt="Coin" class="h-6 md:h-8 lg:h-10">
+                        <span id="Total-money" class="ml-2 text-sm md:text-lg">98600 BDT</span>
+                    </span>
                 </div>
             </div>
         </nav>
+        
         
         
         
@@ -122,7 +131,7 @@
     
     
 
-    <main class="flex flex-col items-center mt-10 p-6 rounded-lg shadow-md w-[90%] mx-auto">
+    <main class="flex flex-col items-center  p-1 rounded-lg shadow-md w-[90%] mx-auto">
        
         
         <div id="donation-section">
