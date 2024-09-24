@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
-<body>
+<body></body>
     <header>
         <nav class="sticky top-0 " style="background: rgb(233, 229, 221);">
             <div class="flex justify-between items-center w-full p-4 text-2xl md:text-3xl lg:text-4xl">
@@ -41,57 +41,71 @@
         <div class="space-y-4 p-4">
             <div class="collapse collapse-arrow bg-base-200 rounded-lg shadow-md transition-all duration-300 ease-in-out">
                 <input type="radio" name="my-accordion-2" checked="checked" />
-                <div class="collapse-title text-xl font-medium p-4 hover:bg-green-100 rounded-lg transition-colors duration-200">
-                    What is Document Object Model (DOM)?
+                <div class="collapse-title text-lg md:text-xl font-medium p-4 hover:bg-green-100 rounded-lg transition-colors duration-200 flex justify-between items-center">
+                    <span class="text-sm md:text-base">What is Document Object Model (DOM)?</span>
                 </div>
-                <div class="collapse-content p-4">
+                <div class="collapse-content p-4 text-sm md:text-base">
                     <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects, enabling programming languages like JavaScript to interact with the page content dynamically.</p>
                 </div>
             </div>
         
             <div class="collapse collapse-arrow bg-base-200 rounded-lg shadow-md transition-all duration-300 ease-in-out">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium p-4 hover:bg-green-100 rounded-lg transition-colors duration-200">
-                    How do you select an element from DOM?
+                <div class="collapse-title text-lg md:text-xl font-medium p-4 hover:bg-green-100 rounded-lg transition-colors duration-200 flex justify-between items-center">
+                    <span class="text-sm md:text-base">How do you select an element from DOM?</span>
                 </div>
-                <div class="collapse-content p-4">
+                <div class="collapse-content p-4 text-sm md:text-base">
                     <p>You can select an element from the DOM using methods like <code>document.getElementById()</code>, <code>document.getElementsByClassName()</code>, <code>document.getElementsByTagName()</code>, or <code>document.querySelector()</code>. These methods allow you to target elements based on their ID, class, tag name, or CSS selector.</p>
                 </div>
             </div>
         
             <div class="collapse collapse-arrow bg-base-200 rounded-lg shadow-md transition-all duration-300 ease-in-out">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium p-4 hover:bg-green-100 rounded-lg transition-colors duration-200">
-                    What is event delegation in the context of the DOM, and why is it useful?
+                <div class="collapse-title text-lg md:text-xl font-medium p-4 hover:bg-green-100 rounded-lg transition-colors duration-200 flex justify-between items-center">
+                    <span class="text-sm md:text-base">What is event delegation in the context of the DOM, and why is it useful?</span>
                 </div>
-                <div class="collapse-content p-4">
+                <div class="collapse-content p-4 text-sm md:text-base">
                     <p>Event delegation is a technique in which a single event listener is added to a parent element, and it handles events triggered by its child elements. This is useful because it reduces the number of event listeners, improving performance, especially in cases where elements are dynamically added to the DOM.</p>
                 </div>
             </div>
         
             <div class="collapse collapse-arrow bg-base-200 rounded-lg shadow-md transition-all duration-300 ease-in-out">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium p-4 hover:bg-green-100 rounded-lg transition-colors duration-200">
-                    How do you manipulate an element's attributes and styles using the DOM?
+                <div class="collapse-title text-lg md:text-xl font-medium p-4 hover:bg-green-100 rounded-lg transition-colors duration-200 flex justify-between items-center">
+                    <span class="text-sm md:text-base">How do you manipulate an element's attributes and styles using the DOM?</span>
                 </div>
-                <div class="collapse-content p-4">
+                <div class="collapse-content p-4 text-sm md:text-base">
                     <p>You can manipulate an element's attributes and styles using the DOM by accessing the element and modifying its properties. For example, you can use <code>element.setAttribute()</code> to change an attribute or directly modify the <code>style</code> property (e.g., <code>element.style.color = 'blue';</code>) to update the styles.</p>
                 </div>
             </div>
         </div>
         
+        <style>
+        @media (max-width: 576px) {
+            .collapse-title {
+                padding-right: 2rem; 
+            }
+        }
+        </style>
+        
+        
+        
         
     </main>
     <footer class="bg-gray-800 text-white p-4 mt-4">
-        <div class="flex justify-between">
-            <span>&copy; 2024 Donate Bangladesh. All rights reserved.</span>
-            <div>
-                <a href="#" class="text-white hover:underline">Privacy Policy</a>
-                <span class="mx-2">|</span>
-                <a href="#" class="text-white hover:underline">Contact Us</a>
+        <div class="flex flex-col md:flex-row justify-between">
+            <span class="text-center md:text-left">&copy; 2024 Donate Bangladesh. All rights reserved.</span>
+            <div class="flex flex-col md:flex-row md:items-center mt-2 md:mt-0">
+                <div class="text-center md:text-right">
+                    <a href="#" class="text-white hover:underline">Privacy Policy</a>
+                    <span class="mx-2">|</span>
+                    <a href="#" class="text-white hover:underline">Contact Us</a>
+                </div>
             </div>
         </div>
     </footer>
+    
+    
     <script>
         // Update the total money display on page load
         document.addEventListener('DOMContentLoaded', function() {
@@ -105,4 +119,5 @@
     
     
 </body>
+
 </html>
