@@ -26,51 +26,7 @@
          width: 100%; 
 }
 
-        .modal {
-    display: none;
-    position: fixed;
-    z-index: 50;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding-top: 100px;
-}
-
-.modal-content {
-    background-color: #ffffff;
-    margin: 5% auto;
-    padding: 30px; 
-    border-radius: 10px;
-    width: 70%; 
-    max-width: 500px; 
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    animation: fadeIn 0.3s;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    transition: color 0.2s;
-}
-
-.close:hover,
-.close:focus {
-    color: #e74c3c;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
+      
 
     </style>
 </head>
@@ -220,18 +176,16 @@
                 <ul id="history-list" style="list-style-type: none; padding: 0;"></ul>
             </div>
         
-           
+            <div id="donation-modal" class="fixed inset-0 flex items-center justify-center z-50" style="display: none;">
+                <div class="modal-overlay absolute inset-0 bg-black opacity-50"></div>
+                <div class="modal-content bg-white rounded-lg p-6 max-w-sm mx-auto relative">
+                    <h2 class="text-xl font-bold mb-4">Donation Successful!</h2>
+                    <p id="modal-message" class="text-gray-700"></p>
+                    <button id="close-modal" class="mt-4 px-4 py-2 bg-green-500 text-white rounded-lg">Close</button>
+                </div>
+            </div>
         
 
-        <div id="donation-modal" class="modal flex items-center justify-center">
-            <div class="modal-content bg-white p-8 rounded-lg shadow-lg text-center">
-                <span class="close text-2xl cursor-pointer text-gray-600 hover:text-gray-800" id="close-modal">&times;</span>
-                <h2 class="text-4xl font-bold text-green-600 mb-4">Congrats!</h2>
-                <img src="coin.png" alt="" class="mx-auto mb-4 w-16 h-16 transform transition-transform duration-300 hover:scale-110">
-                <p class="text-lg text-gray-700 mb-2">You Have Donated for Humankind <br> Successfully</p>
-                <p id="modal-message" class="text-md text-gray-500"></p>
-            </div>
-        </div>
         
         
     </main>
@@ -241,85 +195,83 @@
 
         // Initial amounts for donation buttons
         let firstDonationAmount = 0;
-        let secondDonationAmount = 0; // starting amount for the second button
-        let thirdDonationAmount = 0; // starting amount for the third button
+let secondDonationAmount = 0; // starting amount for the second button
+let thirdDonationAmount = 0; // starting amount for the third button
 
-        // Update the button text to reflect the initial amounts
-        document.getElementById("btn-first-1").innerHTML = `<img src="coin.png" alt=""> ${firstDonationAmount} BDT`;
-        document.getElementById("btn-second-1").innerHTML = `<img src="coin.png" alt=""> ${secondDonationAmount} BDT`;
-        document.getElementById("btn-third-1").innerHTML = `<img src="coin.png" alt=""> ${thirdDonationAmount} BDT`;
+// Update the button text to reflect the initial amounts
+document.getElementById("btn-first-1").innerHTML = `<img src="coin.png" alt=""> ${firstDonationAmount} BDT`;
+document.getElementById("btn-second-1").innerHTML = `<img src="coin.png" alt=""> ${secondDonationAmount} BDT`;
+document.getElementById("btn-third-1").innerHTML = `<img src="coin.png" alt=""> ${thirdDonationAmount} BDT`;
 
-        // Donation logic
-        const buttons = document.querySelectorAll("[id^='clk-btn-']");
-        buttons.forEach((button, index) => {
-            button.addEventListener("click", function() {
-                const input = this.previousElementSibling.value;
-                const totalMoney = document.getElementById("Total-money");
-                let amount = parseInt(input);
+// Donation logic
+const buttons = document.querySelectorAll("[id^='clk-btn-']");
+buttons.forEach((button, index) => {
+    button.addEventListener("click", function() {
+        const input = this.previousElementSibling.value; // Get the value from the input
+        const totalMoney = document.getElementById("Total-money");
+        let amount = parseInt(input);
 
-                if (isNaN(amount) || amount <= 0) {
-                    alert("Please enter a valid amount.");
-                    return;
-                }
+        if (isNaN(amount) || amount <= 0) {
+            alert("Please enter a valid amount.");
+            return;
+        }
 
-                let currentBalance = parseInt(totalMoney.textContent);
-                if (currentBalance < amount) {
-                    alert("Insufficient funds.");
-                    return;
-                }
+        let currentBalance = parseInt(totalMoney.textContent);
+        if (currentBalance < amount) {
+            alert("Insufficient funds.");
+            return;
+        }
 
-                // Subtract from total money
-                currentBalance -= amount;
-                totalMoney.textContent = currentBalance + " BDT";
-                localStorage.setItem('totalMoney', currentBalance);
+        // Subtract from total money
+        currentBalance -= amount;
+        totalMoney.textContent = currentBalance + " BDT";
+        localStorage.setItem('totalMoney', currentBalance);
 
-                // Update the specific donation button's amount
-                let cause = '';
-                if (index === 0) {
-                    firstDonationAmount += amount;
-                    cause = "Noakhali";
-                    document.getElementById("btn-first-1").innerHTML = `<img src="coin.png" alt=""> ${firstDonationAmount} BDT`;
-                } else if (index === 1) {
-                    secondDonationAmount += amount;
-                    cause = "Feni";
-                    document.getElementById("btn-second-1").innerHTML = `<img src="coin.png" alt=""> ${secondDonationAmount} BDT`;
-                } else if (index === 2) {
-                    thirdDonationAmount += amount;
-                    cause = "Quota";
-                    document.getElementById("btn-third-1").innerHTML = `<img src="coin.png" alt=""> ${thirdDonationAmount} BDT`;
-                }
+        // Update the specific donation button's amount
+        let cause = '';
+        if (index === 0) {
+            firstDonationAmount += amount;
+            cause = "Noakhali";
+            document.getElementById("btn-first-1").innerHTML = `<img src="coin.png" alt=""> ${firstDonationAmount} BDT`;
+        } else if (index === 1) {
+            secondDonationAmount += amount;
+            cause = "Feni";
+            document.getElementById("btn-second-1").innerHTML = `<img src="coin.png" alt=""> ${secondDonationAmount} BDT`;
+        } else if (index === 2) {
+            thirdDonationAmount += amount;
+            cause = "Quota";
+            document.getElementById("btn-third-1").innerHTML = `<img src="coin.png" alt=""> ${thirdDonationAmount} BDT`;
+        }
 
-                // Add to history with timestamp
-                const timestamp = new Date().toLocaleString();
-                const historyItem = document.createElement("li");
-                historyItem.textContent = `Donated ${amount} BDT for ${cause} on ${timestamp}`;
-                historyItem.classList.add('text-lg', 'font-medium');
-                document.getElementById("history-list").appendChild(historyItem);
+        // Add to history with timestamp
+        const timestamp = new Date().toLocaleString();
+        const historyItem = document.createElement("li");
+        historyItem.textContent = `Donated ${amount} BDT for ${cause} on ${timestamp}`;
+        historyItem.classList.add('text-lg', 'font-medium');
+        document.getElementById("history-list").appendChild(historyItem);
 
-                // Show modal
-                const modalMessage = document.getElementById("modal-message");
-                const donationModal = document.getElementById("donation-modal");
-                modalMessage.textContent = `Thank you for donating ${amount} BDT for ${cause}!`;
-                donationModal.style.display = "block";
-            });
+        // Show alert
+        document.getElementById("modal-message").textContent = `Thank you for donating ${amount} BDT for ${cause}!`;
+            document.getElementById("donation-modal").style.display = 'flex';
         });
+    });
+    document.getElementById("close-modal").addEventListener("click", function() {
+        document.getElementById("donation-modal").style.display = 'none';
+    });
 
-        // Close modal functionality
-        document.getElementById("close-modal").onclick = function() {
-            document.getElementById("donation-modal").style.display = "none";
-        }
 
-        // Show/hide sections
-        document.getElementById("donation-btn").onclick = function() {
-            document.getElementById("donation-section").style.display = "block";
-            document.getElementById("history-section").style.display = "none";
-        }
+// Show/hide sections
+document.getElementById("donation-btn").onclick = function() {
+    document.getElementById("donation-section").style.display = "block";
+    document.getElementById("history-section").style.display = "none";
+};
 
-        document.getElementById("history-btn").onclick = function() {
-            document.getElementById("donation-section").style.display = "none";
-            document.getElementById("history-section").style.display = "block";
-        }
-   // Get the donation and history buttons
+document.getElementById("history-btn").onclick = function() {
+    document.getElementById("donation-section").style.display = "none";
+    document.getElementById("history-section").style.display = "block";
+};
+
+// Get the donation and history buttons
 const donationBtn = document.getElementById('donation-btn');
 const historyBtn = document.getElementById('history-btn');
 
@@ -354,8 +306,6 @@ donationBtn.addEventListener('click', function () {
 historyBtn.addEventListener('click', function () {
     setActiveButton(historyBtn, donationBtn);
 });
-
-
-    </script>
+</script>
 </body>
 </html>
