@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <header>
+        <nav class="sticky top-0 " style="background: rgb(233, 229, 221);">
+            <div class="flex justify-between items-center w-full p-4 text-2xl md:text-3xl lg:text-4xl">
+                <!-- Blog Button - Left Side (25% width) -->
+                <div class="flex items-center w-1/4">
+                    <a href="index.html" class="bg-[#B4F461] shadow-md px-6 py-2 text-base font-medium inline-block">
+                        Home
+                    </a>
+                </div>
+        
+                <!-- Donate Bangladesh - Center (50% width) -->
+                <div class="hidden md:flex items-center justify-center w-1/2 text-gray-800 font-semibold">
+                    <img src="logo.png" alt="Logo" class="h-8 md:h-10 lg:h-12">
+                    <span class="ml-4">Donate Bangladesh</span>
+                </div>
+        
+                <!-- Total Money - Right Side (25% width) -->
+                <div class="flex items-center justify-end w-1/4 text-gray-800 font-semibold">
+                    <img src="coin.png" alt="Coin" class="h-8 md:h-10 lg:h-12">
+                    <span id="Total-money" class="ml-2">98600 BDT</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="p-4">
+        <h1 class="flex items-center text-2xl md:text-3xl lg:text-4xl font-bold">
+            Important FAQ
+            <img src="question-mark-svgrepo-com.svg" alt="Question mark" class="ml-2 h-12 md:h-16 lg:h-20">
+        </h1>
+        <div class="space-y-4 p-4">
+            <div class="collapse collapse-arrow bg-base-200 rounded-lg shadow-md transition-all duration-300 ease-in-out">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium p-4 hover:bg-green-100 rounded-lg transition-colors duration-200">
+                    What is Document Object Model (DOM)?
+                </div>
+                <div class="collapse-content p-4">
+                    <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects, enabling programming languages like JavaScript to interact with the page content dynamically.</p>
+                </div>
+            </div>
+        
+            <div class="collapse collapse-arrow bg-base-200 rounded-lg shadow-md transition-all duration-300 ease-in-out">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium p-4 hover:bg-green-100 rounded-lg transition-colors duration-200">
+                    How do you select an element from DOM?
+                </div>
+                <div class="collapse-content p-4">
+                    <p>You can select an element from the DOM using methods like <code>document.getElementById()</code>, <code>document.getElementsByClassName()</code>, <code>document.getElementsByTagName()</code>, or <code>document.querySelector()</code>. These methods allow you to target elements based on their ID, class, tag name, or CSS selector.</p>
+                </div>
+            </div>
+        
+            <div class="collapse collapse-arrow bg-base-200 rounded-lg shadow-md transition-all duration-300 ease-in-out">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium p-4 hover:bg-green-100 rounded-lg transition-colors duration-200">
+                    What is event delegation in the context of the DOM, and why is it useful?
+                </div>
+                <div class="collapse-content p-4">
+                    <p>Event delegation is a technique in which a single event listener is added to a parent element, and it handles events triggered by its child elements. This is useful because it reduces the number of event listeners, improving performance, especially in cases where elements are dynamically added to the DOM.</p>
+                </div>
+            </div>
+        
+            <div class="collapse collapse-arrow bg-base-200 rounded-lg shadow-md transition-all duration-300 ease-in-out">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium p-4 hover:bg-green-100 rounded-lg transition-colors duration-200">
+                    How do you manipulate an element's attributes and styles using the DOM?
+                </div>
+                <div class="collapse-content p-4">
+                    <p>You can manipulate an element's attributes and styles using the DOM by accessing the element and modifying its properties. For example, you can use <code>element.setAttribute()</code> to change an attribute or directly modify the <code>style</code> property (e.g., <code>element.style.color = 'blue';</code>) to update the styles.</p>
+                </div>
+            </div>
+        </div>
+        
+        
+    </main>
+    <footer class="bg-gray-800 text-white p-4 mt-4">
+        <div class="flex justify-between">
+            <span>&copy; 2024 Donate Bangladesh. All rights reserved.</span>
+            <div>
+                <a href="#" class="text-white hover:underline">Privacy Policy</a>
+                <span class="mx-2">|</span>
+                <a href="#" class="text-white hover:underline">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Update the total money display on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const storedTotal = localStorage.getItem('totalMoney');
+            if (storedTotal) {
+                document.getElementById('Total-money').innerText = storedTotal + " BDT";
+            }
+        });
+    </script>
+    
+    
+    
+</body>
+</html>

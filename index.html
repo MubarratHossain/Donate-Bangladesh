@@ -77,9 +77,10 @@
             <div class="flex justify-between items-center w-full p-4 text-2xl md:text-3xl lg:text-4xl">
                 <!-- Blog Button - Left Side (25% width) -->
                 <div class="flex items-center w-[25%]">
-                    <button class="btn" style="background-color: #B4F461; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 0.5rem 1.5rem; font-size: 0.875em;">
+                    <a href="home.html"><button class="btn" style="background-color: #B4F461; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 0.5rem 1.5rem; font-size: 0.875em;">
                         Blog
                     </button>
+                    </a>
                 </div>
         
                 <!-- Donate Bangladesh - Center (50% width) -->
@@ -95,6 +96,10 @@
                 </div>
             </div>
         </nav>
+        
+        
+        
+        
         
         <!-- Donation and History Buttons -->
         <div class="flex justify-center mb-4" style="margin-left: -4rem;  backdrop-filter: blur(10px);">
@@ -254,6 +259,7 @@
                 // Subtract from total money
                 currentBalance -= amount;
                 totalMoney.textContent = currentBalance + " BDT";
+                localStorage.setItem('totalMoney', currentBalance);
 
                 // Update the specific donation button's amount
                 let cause = '';
