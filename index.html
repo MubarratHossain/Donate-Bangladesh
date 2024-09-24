@@ -28,213 +28,214 @@
 
       
 
-    </style>
+</style>
 </head>
 <body>
-    <header></header>
-    <div class="sticky top-0 z-10" style="  backdrop-filter: blur(10px)">
-       
-        <nav style="padding-bottom: 1rem; background-color: rgb(249, 247, 243); backdrop-filter: blur(10px);">
-            <div class="flex justify-between items-center w-full p-4 text-lg md:text-xl lg:text-2xl">
-                <!-- Blog Button - Left Side (25% width) -->
-                <div class="flex items-center w-[25%]">
-                    <a href="home.html">
-                        <button class="btn transition duration-200 ease-in-out transform hover:scale-105" style="background-color: #B4F461; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 0.5rem 1rem; font-size: 0.875em; border-radius: 0.375rem;">
-                            Blog
-                        </button>
-                    </a>
-                </div>
-        
-                <!-- Donate Bangladesh - Center (50% width) -->
-                <div class="hidden md:flex items-center justify-center w-[50%]" style="color: #333; font-weight: 600;">
-                    <img src="logo.png" alt="Logo" class="h-8 md:h-10 lg:h-12">
-                    <span class="ml-2 md:ml-4  md:text-lg" style="font-size:xx-large;">Donate Bangladesh</span>
-                </div>
-        
-                <!-- Total Money - Right Side (25% width) -->
-                <div class="flex items-center justify-end w-[25%]" style="color: #333; font-weight: 600;">
-                    <span class="h-8 md:h-10 lg:h-12 flex items-center">
-                        <img src="coin.png" alt="Coin" class="h-6 md:h-8 lg:h-10">
-                        <span id="Total-money" class="ml-2 text-sm md:text-lg">98600 BDT</span>
-                    </span>
-                </div>
-            </div>
-        </nav>
-        
-        
-        
-        
-        
-        
-        <!-- Donation and History Buttons -->
-        <div class="flex flex-col md:flex-row items-center justify-center mb-4" style="backdrop-filter: blur(10px);">
-            <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 p-4">
-                <button id="donation-btn" class="btn active w-full md:w-auto px-4 py-3 text-base" style="background-color: #B4F461; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); color: #333; font-weight: 600; border-radius: 0.375rem;">
-                    Donation
-                </button>
-                <button id="history-btn" class="btn w-full md:w-auto px-4 py-3 text-base" style="background-color: #1111110D; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); color: #333; font-weight: 600; border-radius: 0.375rem;">
-                    History
-                </button>
-            </div>
-        </div>
+<header></header>
+    
+<div class="sticky top-0 z-10" style=" backdrop-filter: blur(10px)">
+<nav style="padding-bottom: 1rem; background-color: rgb(228, 222, 212); backdrop-filter: blur(10px);">
+ <div class="flex justify-between items-center w-full p-4 text-lg md:text-xl lg:text-2xl">
+             
+<div class="flex items-center w-[25%]">
+<a href="home.html">
+<button class="btn transition duration-200 ease-in-out transform hover:scale-105" style="background-color: #B4F461; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 0.5rem 1rem; font-size: 0.875em; border-radius: 0.375rem;">
+ Blog
+</button>
+</a>
+</div>
+     
+            
+<div class="hidden md:flex items-center justify-center w-[50%]" style="color: #333; font-weight: 600;">
+<img src="logo.png" alt="Logo" class="h-8 md:h-10 lg:h-12">
+<span class="ml-2 md:ml-4  md:text-lg" style="font-size:xx-large;">Donate Bangladesh</span>
+</div>
+     
+             
+<div class="flex items-center justify-end w-[25%]" style="color: #333; font-weight: 600;">
+<span class="h-8 md:h-10 lg:h-12 flex items-center">
+<img src="coin.png" alt="Coin" class="h-6 md:h-8 lg:h-10">
+<span id="Total-money" class="ml-2 text-sm md:text-lg">98600 BDT</span>
+</span>
+</div>
+</div>
+</nav>
+     
+ </header>                 
+    
         
         
         
         
+      
+<div class="flex flex-col md:flex-row items-center justify-center mb-4" style="backdrop-filter: blur(10px);">
+<div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 p-4">
+<button id="donation-btn" class="btn active w-full md:w-auto px-4 py-3 text-base" style="background-color: #B4F461; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); color: #333; font-weight: 600; border-radius: 0.375rem;">
+Donation
+</button>
+<button id="history-btn" class="btn w-full md:w-auto px-4 py-3 text-base" style="background-color: #1111110D; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); color: #333; font-weight: 600; border-radius: 0.375rem;">
+History
+</button>
+</div>
+</div>
         
         
-    </div>
+        
+        
+        
+        
+</div>
     
     
 
-    <main class="flex flex-col items-center  p-1 rounded-lg shadow-md w-[90%] mx-auto">
+<main class="flex flex-col items-center  p-1 rounded-lg shadow-md w-[90%] mx-auto">
        
         
-        <div id="donation-section">
-            <div class="flex justify-center mt-10">
-                <div class="max-w-5xl w-full flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 p-6 border border-gray-200 rounded-lg shadow-lg bg-white">
-                    <div class="flex-shrink-0 w-full md:w-1/2">
-                        <div class="h-96 overflow-hidden rounded-lg">
-                            <img src="noakhali.png" alt="Flood picture" class="w-full h-full object-cover transition-transform transform hover:scale-105">
-                        </div>
-                    </div>
-                    <div class="flex flex-col flex-grow w-full md:w-1/2">
-                        <div class="flex items-center space-x-2 mb-4">
-                            <button id="btn-first-1" class="btn bg-gray-100 hover:bg-gray-200 transition duration-150 ease-in-out rounded-lg shadow-md p-2 flex items-center">
-                                <img src="coin.png" alt="" class="h-6 mr-2">
-                                <span class="text-lg font-semibold">0 BDT</span>
-                            </button>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3">Donate for Flood at Noakhali, Bangladesh</h3>
-                        <p class="mb-4 text-gray-700">The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies to those affected by this disaster. Every contribution, big or small, makes a difference.</p>
-                        <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full max-w-xs mb-4 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-150 ease-in-out" />
-                        <button id="clk-btn-1" class="btn btn-wide w-full text-[#111111] font-semibold rounded-lg p-3 shadow-md" style="background-color: #B4F461;">
-                            Donate Now
-                        </button>
-                    </div>
-                </div>
-            </div>
+<div id="donation-section">
+<div class="flex justify-center mt-10">
+<div class="max-w-5xl w-full flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 p-6 border border-gray-200 rounded-lg shadow-lg bg-white">
+<div class="flex-shrink-0 w-full md:w-1/2">
+<div class="h-96 overflow-hidden rounded-lg">
+<img src="noakhali.png" alt="Flood picture" class="w-full h-full object-cover transition-transform transform hover:scale-105">
+</div>
+</div>
+<div class="flex flex-col flex-grow w-full md:w-1/2">
+<div class="flex items-center space-x-2 mb-4">
+<button id="btn-first-1" class="btn bg-gray-100 hover:bg-gray-200 transition duration-150 ease-in-out rounded-lg shadow-md p-2 flex items-center">
+<img src="coin.png" alt="" class="h-6 mr-2">
+<span class="text-lg font-semibold">0 BDT</span>
+</button>
+</div>
+<h3 class="text-xl font-semibold mb-3">Donate for Flood at Noakhali, Bangladesh</h3>
+<p class="mb-4 text-gray-700">The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies to those affected by this disaster. Every contribution, big or small, makes a difference.</p>
+<input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full max-w-xs mb-4 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-150 ease-in-out" />
+<button id="clk-btn-1" class="btn btn-wide w-full text-[#111111] font-semibold rounded-lg p-3 shadow-md" style="background-color: #B4F461;">
+Donate Now
+</button>
+</div>
+</div>
+</div>
             
             
-            <div class="flex justify-center mt-10">
-                <div class="max-w-5xl w-full flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 p-6 border border-gray-200 rounded-lg shadow-lg bg-white">
-                    <div class="flex-shrink-0 w-full md:w-1/2">
-                        <div class="h-96 overflow-hidden rounded-lg">
-                            <img src="feni.png" alt="Flood picture" class="w-full h-full object-cover transition-transform transform hover:scale-105">
-                        </div>
-                    </div>
-                    <div class="flex flex-col flex-grow w-full md:w-1/2">
-                        <div class="flex items-center space-x-2 mb-8">
-                            <button id="btn-second-1" class="btn bg-gray-100 hover:bg-gray-200 transition duration-150 ease-in-out rounded-lg shadow-md p-2 flex items-center">
-                                <img src="coin.png" alt="" class="h-6 mr-2">
-                                <span class="text-lg font-semibold">0 BDT</span>
-                            </button>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-4">Donate for Flood Relief in Feni, Bangladesh</h3>
-                        <p class="mb-2 text-gray-700">The recent floods in Feni have devastated local communities. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies.</p>
-                        <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full max-w-xs mb-4 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-150 ease-in-out" />
-                        <button id="clk-btn-2" class="btn btn-wide w-full text-[#111111] font-semibold rounded-lg p-3 shadow-md" style="background-color: #B4F461;">
-                            Donate Now
-                        </button>
-                    </div>
-                </div>
-            </div>
+<div class="flex justify-center mt-10">
+<div class="max-w-5xl w-full flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 p-6 border border-gray-200 rounded-lg shadow-lg bg-white">
+<div class="flex-shrink-0 w-full md:w-1/2">
+<div class="h-96 overflow-hidden rounded-lg">
+<img src="feni.png" alt="Flood picture" class="w-full h-full object-cover transition-transform transform hover:scale-105">
+</div>
+</div>
+<div class="flex flex-col flex-grow w-full md:w-1/2">
+<div class="flex items-center space-x-2 mb-8">
+<button id="btn-second-1" class="btn bg-gray-100 hover:bg-gray-200 transition duration-150 ease-in-out rounded-lg shadow-md p-2 flex items-center">
+<img src="coin.png" alt="" class="h-6 mr-2">
+<span class="text-lg font-semibold">0 BDT</span>
+</button>
+</div>
+<h3 class="text-xl font-semibold mb-4">Donate for Flood Relief in Feni, Bangladesh</h3>
+<p class="mb-2 text-gray-700">The recent floods in Feni have devastated local communities. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies.</p>
+<input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full max-w-xs mb-4 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-150 ease-in-out" />
+<button id="clk-btn-2" class="btn btn-wide w-full text-[#111111] font-semibold rounded-lg p-3 shadow-md" style="background-color: #B4F461;">
+ Donate Now
+</button>
+</div>
+</div>
+</div>
             
             
-            <div class="flex justify-center mt-10">
-                <div class="max-w-5xl w-full flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 p-6 border border-gray-200 rounded-lg shadow-lg bg-white">
-                    <div class="flex-shrink-0 w-full md:w-1/2">
-                        <div class="h-96 overflow-hidden rounded-lg">
-                            <img src="quota-protest.png" alt="Flood picture" class="w-full h-full object-cover transition-transform transform hover:scale-105">
-                        </div>
-                    </div>
-                    <div class="flex flex-col flex-grow w-full md:w-1/2">
-                        <div class="flex items-center space-x-2 mb-8">
-                            <button id="btn-third-1" class="btn bg-gray-100 hover:bg-gray-200 transition duration-150 ease-in-out rounded-lg shadow-md p-2 flex items-center">
-                                <img src="coin.png" alt="" class="h-6 mr-2">
-                                <span class="text-lg font-semibold">0 BDT</span>
-                            </button>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Aid for Injured in the Quota Movement</h3>
-                        <p class="mb-5 text-gray-700">Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected by the recent Quota movement.</p>
-                        <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full max-w-xs mb-4 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-150 ease-in-out" />
-                        <button id="clk-btn-3" class="btn btn-wide w-full text-[#111111] font-semibold rounded-lg p-3 shadow-md" style="background-color: #B4F461;">
-                            Donate Now
-                        </button>
-                    </div>
-                </div>
-            </div>
+<div class="flex justify-center mt-10">
+<div class="max-w-5xl w-full flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 p-6 border border-gray-200 rounded-lg shadow-lg bg-white">
+<div class="flex-shrink-0 w-full md:w-1/2">
+<div class="h-96 overflow-hidden rounded-lg">
+<img src="quota-protest.png" alt="Flood picture" class="w-full h-full object-cover transition-transform transform hover:scale-105">
+</div>
+</div>
+<div class="flex flex-col flex-grow w-full md:w-1/2">
+<div class="flex items-center space-x-2 mb-8">
+<button id="btn-third-1" class="btn bg-gray-100 hover:bg-gray-200 transition duration-150 ease-in-out rounded-lg shadow-md p-2 flex items-center">
+<img src="coin.png" alt="" class="h-6 mr-2">
+<span class="text-lg font-semibold">0 BDT</span>
+</button>
+</div>
+<h3 class="text-xl font-semibold mb-2">Aid for Injured in the Quota Movement</h3>
+<p class="mb-5 text-gray-700">Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected by the recent Quota movement.</p>
+<input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full max-w-xs mb-4 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-150 ease-in-out" />
+<button id="clk-btn-3" class="btn btn-wide w-full text-[#111111] font-semibold rounded-lg p-3 shadow-md" style="background-color: #B4F461;">
+Donate Now
+</button>
+</div>
+</div>
+</div>
             
             
             
-        </div>
+</div>
 
        
         
-            <div id="history-section" style="display: none; width: 100%;">
-                <h2 class="text-2xl font-bold mb-2">Donation History</h2>
-                <ul id="history-list" style="list-style-type: none; padding: 0;"></ul>
-            </div>
+<div id="history-section" style="display: none; width: 100%;">
+<h2 class="text-2xl font-bold mb-2">Donation History</h2>
+<ul id="history-list" style="list-style-type: none; padding: 0;"></ul>
+</div>
         
-            <div id="donation-modal" class="fixed inset-0 flex items-center justify-center z-50" style="display: none;">
-                <div class="modal-overlay absolute inset-0 bg-black opacity-50"></div>
-                <div class="modal-content bg-white rounded-lg p-6 max-w-md mx-auto relative shadow-lg">
-                    <h2 class="text-3xl font-bold mb-4 text-center text-green-500">Congrats!</h2>
-                    <div class="flex justify-center mb-4">
-                        <img src="coin.png" alt="" class="h-12 w-12"> <!-- Increased size of the coin image -->
-                    </div>
-                    <p class="text-gray-600 text-center mb-4">You have Donated for Humankind</p>
-                    <p id="modal-message" class="text-gray-700 text-lg text-center"></p> <!-- Added message paragraph -->
+<div id="donation-modal" class="fixed inset-0 flex items-center justify-center z-50" style="display: none;">
+<div class="modal-overlay absolute inset-0 bg-black opacity-50"></div>
+<div class="modal-content bg-white rounded-lg p-6 max-w-md mx-auto relative shadow-lg">
+<h2 class="text-3xl font-bold mb-4 text-center text-green-500">Congrats!</h2>
+<div class="flex justify-center mb-4">
+<img src="coin.png" alt="" class="h-12 w-12"> 
+</div>
+<p class="text-gray-600 text-center mb-4">You have Donated for Humankind</p>
+<p id="modal-message" class="text-gray-700 text-lg text-center"></p> 
                     
-                    <button id="close-modal" class="mt-4 w-full px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200">Close</button>
-                </div>
-            </div>
+<button id="close-modal" class="mt-4 w-full px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200">Close</button>
+</div>
+</div>
             
             
         
 
         
         
-    </main>
+</main>
 
-    <script>
+<script>
     
 
-        // Initial amounts for donation buttons
-        let firstDonationAmount = 0;
-let secondDonationAmount = 0; // starting amount for the second button
-let thirdDonationAmount = 0; // starting amount for the third button
+        
+let firstDonationAmount = 0;
+let secondDonationAmount = 0; 
+let thirdDonationAmount = 0; 
 
-// Update the button text to reflect the initial amounts
+
 document.getElementById("btn-first-1").innerHTML = `<img src="coin.png" alt=""> ${firstDonationAmount} BDT`;
 document.getElementById("btn-second-1").innerHTML = `<img src="coin.png" alt=""> ${secondDonationAmount} BDT`;
 document.getElementById("btn-third-1").innerHTML = `<img src="coin.png" alt=""> ${thirdDonationAmount} BDT`;
 
-// Donation logic
+
 const buttons = document.querySelectorAll("[id^='clk-btn-']");
 buttons.forEach((button, index) => {
     button.addEventListener("click", function() {
-        const input = this.previousElementSibling.value; // Get the value from the input
-        const totalMoney = document.getElementById("Total-money");
-        let amount = parseInt(input);
+    const input = this.previousElementSibling.value; 
+    const totalMoney = document.getElementById("Total-money");
+    let amount = parseInt(input);
 
-        if (isNaN(amount) || amount <= 0) {
-            alert("Please enter a valid amount.");
-            return;
+    if (isNaN(amount) || amount <= 0) {
+        alert("Please enter a valid amount.");
+        return;
         }
 
-        let currentBalance = parseInt(totalMoney.textContent);
-        if (currentBalance < amount) {
-            alert("Insufficient funds.");
-            return;
+    let currentBalance = parseInt(totalMoney.textContent);
+    if (currentBalance < amount) {
+        alert("Insufficient funds.");
+        return;
         }
 
-        // Subtract from total money
+        
         currentBalance -= amount;
         totalMoney.textContent = currentBalance + " BDT";
         localStorage.setItem('totalMoney', currentBalance);
 
-        // Update the specific donation button's amount
+        
         let cause = '';
         if (index === 0) {
             firstDonationAmount += amount;
@@ -250,39 +251,39 @@ buttons.forEach((button, index) => {
             document.getElementById("btn-third-1").innerHTML = `<img src="coin.png" alt=""> ${thirdDonationAmount} BDT`;
         }
 
-        // Add to history with timestamp
+        
         const timestamp = new Date().toLocaleString();
         const historyItem = document.createElement("li");
         historyItem.textContent = `Donated ${amount} BDT for ${cause} on ${timestamp}`;
         historyItem.classList.add('text-lg', 'font-medium');
         document.getElementById("history-list").appendChild(historyItem);
 
-        // Show alert
+        
         document.getElementById("modal-message").textContent = `Thank you for donating ${amount} BDT for ${cause}!`;
-            document.getElementById("donation-modal").style.display = 'flex';
+        document.getElementById("donation-modal").style.display = 'flex';
         });
     });
     document.getElementById("close-modal").addEventListener("click", function() {
-        document.getElementById("donation-modal").style.display = 'none';
+    document.getElementById("donation-modal").style.display = 'none';
     });
 
 
-// Show/hide sections
+
 document.getElementById("donation-btn").onclick = function() {
-    document.getElementById("donation-section").style.display = "block";
-    document.getElementById("history-section").style.display = "none";
+document.getElementById("donation-section").style.display = "block";
+document.getElementById("history-section").style.display = "none";
 };
 
 document.getElementById("history-btn").onclick = function() {
-    document.getElementById("donation-section").style.display = "none";
-    document.getElementById("history-section").style.display = "block";
+document.getElementById("donation-section").style.display = "none";
+document.getElementById("history-section").style.display = "block";
 };
 
-// Get the donation and history buttons
+
 const donationBtn = document.getElementById('donation-btn');
 const historyBtn = document.getElementById('history-btn');
 
-// Define the active and inactive styles
+
 const activeStyles = {
     backgroundColor: '#B4F461',
     color: '#333',
@@ -293,23 +294,23 @@ const inactiveStyles = {
     color: '#333',
 };
 
-// Function to update styles
+
 function setActiveButton(activeBtn, inactiveBtn) {
-    // Apply active styles to the clicked button
+    
     activeBtn.style.backgroundColor = activeStyles.backgroundColor;
     activeBtn.style.color = activeStyles.color;
 
-    // Apply inactive styles to the other button
+    
     inactiveBtn.style.backgroundColor = inactiveStyles.backgroundColor;
     inactiveBtn.style.color = inactiveStyles.color;
 }
 
-// Add click event listener to the donation button
+
 donationBtn.addEventListener('click', function () {
     setActiveButton(donationBtn, historyBtn);
 });
 
-// Add click event listener to the history button
+
 historyBtn.addEventListener('click', function () {
     setActiveButton(historyBtn, donationBtn);
 });
